@@ -18,6 +18,3 @@ LAST_SQL_BACKUP=$(ls $dest_folder/$db_backup_name | tail -n 1)
 
 # Restore database
 /usr/bin/mysql -u MYSQL_LOGIN --password=MYSQL_PASSWORD MYSQL_DATABASE < $LAST_SQL_BACKUP
-
-# Clear drupal caches
-drush -r $dest_folder cc all
